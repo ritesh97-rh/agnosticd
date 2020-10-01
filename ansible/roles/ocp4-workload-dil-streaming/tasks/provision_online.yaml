@@ -1,5 +1,5 @@
 ---
-- name: Evaluate {{ operators_project }} namespace if not exists 
+- name: Evaluate {{ operators_project }} namespace if not exists
   k8s:
     api_version: v1
     kind: Namespace
@@ -44,13 +44,13 @@
 
 - name: Download example files
   unarchive:
-      src: https://access.redhat.com/node/4306051/423/0/14663711
-      dest: '{{ amq_online_tmp }}'
-      remote_src: yes
+    src: https://access.redhat.com/node/4306051/423/0/14663711
+    dest: '{{ amq_online_tmp }}'
+    remote_src: true
 
 - name: Retrieve files
   find:
-    paths: 
+    paths:
       - '{{ amq_online_tmp }}/install/components/example-plans/'
       - '{{ amq_online_tmp }}/install/components/example-authservices/'
   register: install_files
