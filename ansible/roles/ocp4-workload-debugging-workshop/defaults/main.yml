@@ -1,7 +1,7 @@
 ---
-become_override: False
+become_override: false
 ocp_username: opentlc-mgr
-silent: False
+silent: false
 subdomain_base: "test.com"
 aws_region: "eu-west-1"
 user_count: 10
@@ -52,7 +52,7 @@ workshop_istioworkspace_enabled: true
 workshop_istioworkspace_image_name: quay.io/maistra/istio-workspace
 workshop_istioworkspace_image_tag: v0.0.3
 
-workshop_workshopper_enabled: false   
+workshop_workshopper_enabled: false
 
-_deploy_instance: True
-_on_rhpds_aws: True
+_deploy_instance: true
+_on_rhpds_aws: true

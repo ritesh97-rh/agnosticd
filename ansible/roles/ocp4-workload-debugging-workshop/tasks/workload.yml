@@ -29,7 +29,7 @@
   - ./templates/operator.j2
 
 - name: Deploy default Workshop instance
-  when: _deploy_instance|bool
+  when: _deploy_instance | bool
   block:
   - name: Create OpenShift Custom Resource for Workshop Instance
     k8s:
@@ -43,4 +43,4 @@
 - name: workload tasks complete
   debug:
     msg: "Workload Tasks completed successfully."
-  when: not silent|bool
+  when: not silent | bool
